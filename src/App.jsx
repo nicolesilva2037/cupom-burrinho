@@ -1,7 +1,9 @@
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import Home from "./components/Pages/Home";
-import Contact from "./components/Pages/Contact";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
+import Stores from "./Pages/Stores";
+
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -12,6 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/lojas" element={<Stores />} />
         </Routes>
       </main>
       <Footer />

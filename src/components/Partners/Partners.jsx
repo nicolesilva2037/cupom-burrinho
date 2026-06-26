@@ -1,7 +1,6 @@
 import PartnerCard from "./PartnerCard";
 import stores from "../../data/stores.json";
 
-
 export default function Partners(){
 
   return (

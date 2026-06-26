@@ -1,4 +1,4 @@
-import burrinho from "../Assets/Images/burrinho-mascot.png";
+import burrinho from "../../assets/Images/burrinho-mascot.png";
 import { Link } from "react-router-dom";
 
 export default function Hero() {

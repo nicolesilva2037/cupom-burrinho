@@ -1,4 +1,4 @@
-import burrinho from "../Assets/Images/burrinho-mascot.png";
+import burrinho from "../../assets/Images/burrinho-mascot.png";
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-card">

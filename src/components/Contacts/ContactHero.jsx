@@ -1,4 +1,4 @@
-import burrinho from "../../components/Assets/Images/burrinho-mascot.png";
+import burrinho from "../../assets/images/burrinho-mascot.png";
 
 export default function ContactHero() {
   return (

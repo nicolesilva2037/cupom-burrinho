@@ -1,4 +1,4 @@
-import burrinho from "../Assets/Images/burrinho-mascot.png";
+import burrinho from "../../assets/Images/burrinho-mascot.png";
 export default function Newsletter() {
   return (
     <section className="max-w-6xl mx-auto px-4 pb-16">
