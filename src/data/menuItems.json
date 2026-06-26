@@ -5,9 +5,9 @@
     "customClass": "hover:text-primary transition-colors"
   },
   {
-    "label": "Lojas",
-    "url": "#lojas",
-    "customClass": "hover:text-primary transition-colors"
+  "label": "Lojas",
+  "url": "/lojas",
+  "customClass": "hover:text-primary transition-colors"
   },
   {
     "label": "Como funciona",
