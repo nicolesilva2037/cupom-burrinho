@@ -1,0 +1,62 @@
+import burrinho from "../../components/Assets/Images/burrinho-mascot.png";
+
+export default function ContactHero() {
+  return (
+    <section
+      className="relative overflow-hidden py-20 md:py-28"
+      style={{ background: "var(--gradient-sky)" }}
+    >
+      <div className="relative max-w-6xl mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* TEXTO */}
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-xs font-bold uppercase tracking-wider">
+              💬 Estamos ouvindo você
+            </span>
+
+            <h1 className="mt-6 text-5xl md:text-7xl font-display font-bold leading-none">
+              Achou um cupom quebrado?
+              <span className="text-primary"> O Burrinho resolve. </span>
+            </h1>
+
+            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
+              Lembre-se que estamos apenas a um relincho de distância. Encontrou
+              um cupom que não funciona? Tem uma sugestão? Quer divulgar sua
+              loja? Manda uma mensagem que nossa equipe responde o mais rápido
+              possível.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#formulario"
+                className="rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground hover:scale-105 transition"
+              >
+                Enviar mensagem
+              </a>
+
+              <a
+                href="#contatos"
+                className="rounded-full border-2 border-border bg-card px-8 py-4 font-bold"
+              >
+                Ver contatos
+              </a>
+            </div>
+          </div>
+
+          {/* IMAGEM */}
+          <div className="relative">
+            <div className="bg-card border-2 border-border rounded-4xl p-4 shadow-soft">
+              <div className="mt-4 rounded-3xl bg-accent/40 h-105 flex items-center justify-center">
+                <img
+                  src={burrinho}
+                  alt="Mascote Burrinho"
+                  className="w-60 animate-float"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

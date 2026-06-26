@@ -1,0 +1,69 @@
+[
+  {
+    "id": "1",
+    "store": "Amazon",
+    "title": "10% OFF em eletrônicos selecionados",
+    "code": "BURRINHO10",
+    "discount": "10%",
+    "category": "Eletrônicos",
+    "hot": true
+  },
+  {
+    "id": "2",
+    "store": "Magalu",
+    "title": "Frete grátis em compras acima de R$99",
+    "code": "FRETEFREE",
+    "discount": "Frete grátis",
+    "category": "Casa"
+  },
+  {
+    "id": "3",
+    "store": "Shopee",
+    "title": "R$25 OFF em moda feminina",
+    "code": "MODA25",
+    "discount": "R$25",
+    "category": "Moda",
+    "hot": true
+  },
+  {
+    "id": "4",
+    "store": "iFood",
+    "title": "50% OFF na primeira compra",
+    "code": "PRIMEIRO50",
+    "discount": "50%",
+    "category": "Comida"
+  },
+  {
+    "id": "5",
+    "store": "Netshoes",
+    "title": "15% OFF em tênis esportivos",
+    "code": "RUN15",
+    "discount": "15%",
+    "category": "Esportes"
+  },
+  {
+    "id": "6",
+    "store": "Mercado Livre",
+    "title": "R$50 OFF acima de R$300",
+    "code": "BURRO50",
+    "discount": "R$50",
+    "category": "Geral",
+    "hot": true
+  },
+  {
+    "id": "7",
+    "store": "Americanas",
+    "title": "20% OFF em livros",
+    "code": "LER20",
+    "discount": "20%",
+    "category": "Livros"
+  },
+  {
+    "id": "8",
+    "store": "Centauro",
+    "title": "25% OFF segunda peça",
+    "code": "DUO25",
+    "discount": "25%",
+    "category": "Esportes"
+  }
+]
