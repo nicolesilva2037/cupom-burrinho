@@ -84,11 +84,7 @@ export default function Hero() {
         <div className="relative flex justify-center">
           <div className="absolute inset-0 flex items-center justify-center">
             <div
-              className="w-72 h-72 rounded-full blur-2xl"
-              style={{
-                background:
-                  "color-mix(in oklch, oklch(0.72 11 235) 20%, transparent)",
-              }}
+              className="w-72 h-72 rounded-full blur-2xl bg-blue-500"
             />
           </div>
 

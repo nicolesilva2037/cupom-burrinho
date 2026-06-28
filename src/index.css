@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@theme {
+
+  --color-background: #FFF9EF;
+  --color-foreground: #1F2937;
+  --color-primary: #FF8C42;
+  --color-primary-foreground: #FFFFFF;
+  --color-accent: #FFE4B8;
+  --color-blue-burrinho: #2B8CEE;
+  --color-blue-burrinho-deep: #145DA0;
+  --color-card: #FFFFFF;
+  --color-border: #E5E7EB;
+  --color-muted-foreground: #6B7280;
+  --background-image-gradient-sky:
+    linear-gradient(
+      180deg,
+      #EAF6FF 0%,
+      #FFFFFF 100%
+    );
+  --background-image-gradient-hero:
+    linear-gradient(
+      135deg,
+      #FF8C42,
+      #2B8CEE
+    );
+
+}
