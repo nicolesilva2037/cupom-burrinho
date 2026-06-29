@@ -1,0 +1,12 @@
+[
+  {
+    "label": "Login",
+    "url": "/login",
+    "customClass": "rounded-full bg-[#FF8E02] px-5 py-2 text-sm font-bold text-primary-foreground hover:scale-105 transition-transform"
+  },
+  {
+    "label": "Cadastro",
+    "url": "/cadastro",
+    "customClass": "rounded-full bg-[#FF8E02] px-5 py-2 text-sm font-bold text-primary-foreground hover:scale-105 transition-transform"
+  }
+]

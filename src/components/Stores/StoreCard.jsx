@@ -1,8 +1,8 @@
 export default function StoreCard({ store }) {
-
   return (
-    <div
-      className="
+    <div>
+      <div
+        className="
       bg-card
       border-2
       border-border
@@ -12,22 +12,18 @@ export default function StoreCard({ store }) {
       hover:scale-105
       transition-all
       "
-    >
-      <div className="flex items-center gap-3">
-        <span className="text-2xl">
-          🛍️
-        </span>
-        <div>
-          <h3 className="font-display font-bold text-lg">
-            {store}
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            Cupom exclusivo para assinantes
-          </p>
+      >
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">🛍️</span>
+          <div>
+            <h3 className="font-display font-bold text-lg">{store}</h3>
+            <p className="text-sm text-muted-foreground">
+              Cupom exclusivo para assinantes
+            </p>
+          </div>
         </div>
-      </div>
-      <button
-        className="
+        <button
+          className="
         mt-5
         w-full
         rounded-full
@@ -36,11 +32,10 @@ export default function StoreCard({ store }) {
         font-bold
         text-primary-foreground
         "
-      >
-        Ver desconto
-      </button>
+        >
+          Ver desconto
+        </button>
+      </div>
     </div>
-
-  )
-
+  );
 }

@@ -1,12 +1,9 @@
-export default function StoreHero(){
-
-
-return (
-
-<section className="relative overflow-hidden bg-gradient-sky py-20">
-<div className="absolute inset-0 opacity-40 pointer-events-none">
-<div
-className="
+export default function StoreHero() {
+  return (
+    <section className="relative overflow-hidden bg-gradient-sky py-20 -mt-17">
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div
+          className="
 absolute 
 top-10 
 left-10 
@@ -15,13 +12,13 @@ h-40
 rounded-full 
 blur-3xl
 "
-style={{
-background:
-"color-mix(in oklch, oklch(0.72 0.18 45) 20%, transparent)"
-}}
-></div>
-<div
-className="
+          style={{
+            background:
+              "color-mix(in oklch, oklch(0.72 0.18 45) 20%, transparent)",
+          }}
+        ></div>
+        <div
+          className="
 absolute 
 bottom-10 
 right-10 
@@ -30,59 +27,47 @@ h-40
 rounded-full 
 blur-3xl
 "
-style={{
-background:
-"color-mix(in oklch, oklch(0.72 0.11 235) 30%, transparent)"
-}}
-></div>
-</div>
-<div className="
+          style={{
+            background:
+              "color-mix(in oklch, oklch(0.72 0.11 235) 30%, transparent)",
+          }}
+        ></div>
+      </div>
+      <div
+        className="
 relative 
 max-w-6xl 
 mx-auto 
 px-4 
 text-center
-">
-<span
-className="
-inline-flex
-items-center
-rounded-full
-bg-accent
-text-blue-burrinho-deep
-px-4
-py-1.5
-text-xs
-font-bold
-uppercase
-tracking-wider
 "
->
-🛍️ Parceiros oficiais
-</span>
-<h1
-className="
-mt-5
+      >
+        <h1
+          className="
+
 text-5xl
 md:text-6xl
 font-display
 font-bold
+m-20
 "
->
-Lojas que ajudam você a economizar com o Burrinho!
-</h1>
-<p
-className="
+        >
+          Lojas que ajudam você a economizar com o Burrinho!
+        </h1>
+        <p
+          className="
 mt-5
 text-lg
 text-muted-foreground
 max-w-2xl
 mx-auto
+font-extralight
 "
->
-Confira todos os parceiros que oferecem descontos exclusivos para membros do clube.
-</p>
-</div>
-</section>
-)
+        >
+          Confira todos os parceiros que oferecem descontos exclusivos para
+          membros do clube.
+        </p>
+      </div>
+    </section>
+  );
 }

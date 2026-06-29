@@ -3,13 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <header
-      className="sticky top-0 z-50 backdrop-blur-md border-b border-border"
-      style={{
-        background:
-          "color-mix(in oklch, oklch(0.985 0.015 75) 80%, transparent)",
-      }}
-    >
+    <header className="sticky top-0 z-50 backdrop-blur-md border-b border-border ">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Menu />
 

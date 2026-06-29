@@ -7,9 +7,11 @@ import FAQ from "../components/Contacts/FAQ";
 export default function Contact() {
   return (
     <>
+      <Navbar />
       <ContactHero />
       <ContactForm />
       <FAQ />
+      <Footer />
     </>
   );
 }
