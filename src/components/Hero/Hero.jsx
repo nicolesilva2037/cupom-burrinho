@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-center hidden md:block">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-72 h-72 rounded-full blur-2xl bg-blue-100" />
           </div>
@@ -47,7 +47,7 @@ export default function Hero() {
           <img
             src={burrinho}
             alt="Mascote burrinho azul segurando cupom"
-            className="relative w-250 max-w-full animate-float drop-shadow-2xl"
+            className="relative w-250 max-w-full animate-float drop-shadow-2xl "
           />
         </div>
       </div>
