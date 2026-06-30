@@ -6,7 +6,7 @@ export default function ContactHero() {
       <section className="relative overflow-hidden py-20 md:py-28 -mt-17">
         <div className="relative max-w-6xl mx-auto px-4 m-15">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="sm:px-8">
               <h1 className="mt-6 text-5xl md:text-7xl font-display font-bold leading-none">
                 Achou um cupom quebrado?
                 <span className="text-primary"> O Burrinho resolve. </span>
@@ -38,7 +38,7 @@ export default function ContactHero() {
 
             <div className="relative">
               <div className="rounded-4xl p-4 shadow-soft">
-                <div className="mt-4 rounded-3xl h-105 flex items-center justify-center">
+                <div className="mt-4 rounded-3xl h-105 flex items-center justify-center hidden md:block">
                   <img
                     src={burrinho}
                     alt="Mascote Burrinho"

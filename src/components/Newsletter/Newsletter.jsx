@@ -2,11 +2,11 @@ import burrinho from "../../assets/Images/burrinho-mascot.png";
 export default function Newsletter() {
   return (
     <section className=" mx-auto px-4 pb-16 bg-linear-to-b from-[#fefeff] to-[#eaf5ff]">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative overflow-hidden rounded-3xl p-10 md:p-14 bg-orange-400">
-          <div className="relative z-10 grid md:grid-cols-[1fr_auto] gap-8 items-center">
+      <div className="max-w-7xl mx-auto sm:px-6">
+        <div className="relative overflow-hidden rounded-3xl p-10 md:p-14 bg-orange-400 ">
+          <div className="relative z-10 grid md:grid-cols-[1fr_auto] gap-8 items-center ">
             <div className="text-primary-foreground">
-              <h2 className="text-3xl md:text-4xl font-display font-bold tracking-[-0.01em]">
+              <h2 className="text-3xl md:text-4xl font-display font-bold tracking-[-0.01em] ">
                 Fique por dentro das novas parcerias
               </h2>
 
