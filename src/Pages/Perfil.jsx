@@ -13,15 +13,11 @@ export default function Perfil() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-background text-foreground">
+    <div className="min-h-screen flex flex-col font-sans bg-linear-to-b from-[#fefeff] to-[#eaf5ff] text-foreground">
       <Navbar loggedIn />
 
       <main className="flex-1">
         <div className="max-w-4xl mx-auto px-4 py-12">
-          <span className="inline-flex items-center gap-2 rounded-full bg-accent text-blue-burrinho-deep px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
-            🐴 Sua área no clube
-          </span>
-
           <h1 className="mt-4 text-3xl md:text-4xl font-display font-bold text-foreground">
             Meu perfil
           </h1>

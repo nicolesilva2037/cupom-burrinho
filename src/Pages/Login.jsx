@@ -6,8 +6,7 @@ export default function Login() {
   return (
     <AuthLayout
       current="login"
-      badge="🔑 Acesso de assinante"
-      title="Bem-vinda de volta!"
+      title="Bem-vindo!"
       subtitle="Entre para liberar seus cupons exclusivos."
     >
       <LoginForm />

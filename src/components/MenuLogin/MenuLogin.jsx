@@ -8,9 +8,8 @@ export default function MenuLogin({ current }) {
   const item = menuLogin.find((i) => i.label.toLowerCase() !== current);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md border-b border-border bg-background/80">
+    <header className="sticky top-0 z-50 backdrop-blur-md border-b border-border ">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo: mascote real do projeto */}
         <Link to="/" className="flex items-center gap-2">
           <img src={burrinho} alt="Mascote Burrinho" className="h-9 w-9" />
           <span className="font-display font-bold text-lg text-foreground">
@@ -18,7 +17,6 @@ export default function MenuLogin({ current }) {
           </span>
         </Link>
 
-        {/* Botão: o outro link, calculado pelo find() acima */}
         <MenuItemLog
           url={item.url}
           label={item.label}

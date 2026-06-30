@@ -28,10 +28,6 @@ export default function HowItWorks() {
     <section
       id="como"
       className="py-16 bg-linear-to-b from-[#fefeff] to-[#eaf5ff]"
-      // style={{
-      //   background:
-      //     "color-mix(in oklch, oklch(0.9778 0.0117 239.9) 40%, transparent)",
-      // }}
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
