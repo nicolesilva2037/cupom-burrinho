@@ -4,7 +4,7 @@ import Stores from "./Pages/Stores";
 import Login from "./Pages/Login";
 import Cadastro from "./Pages/Cadastro";
 import Perfil from "./Pages/Perfil";
-
+import HowCouponWorks from "./Pages/HowCouponWorks";
 import { Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -18,6 +18,7 @@ export default function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Cadastro" element={<Cadastro />} />
           <Route path="/Perfil" element={<Perfil />} />
+          <Route path="/como-funciona" element={<HowCouponWorks />} />
         </Routes>
       </main>
     </div>
