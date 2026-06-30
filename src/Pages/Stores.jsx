@@ -9,7 +9,7 @@ export default function Store() {
     <>
       <Navbar />
       <StoreHero />
-      <section className="w-12/12 p-20 bg-linear-to-b from-[#fefeff] to-[#eaf5ff]">
+      <section className="w-12/12 -mt-3 bg-linear-to-b from-[#eaf5ff] to-[#fefeff]">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-display font-bold ">
             Alguns de nossos parceiros
