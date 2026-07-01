@@ -1,28 +1,35 @@
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import PricingCards from "../components/HowCouponWorks/PricingCard";
+import ComparisonTable from "../components/HowCouponWorks/ComparisionTable";
 
 export default function HowCouponWorks() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#fefeff] to-[#eaf5ff]">
+    <section className="relative overflow-hidden bg-gradient-sky">
       <Navbar />
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-display font-bold mt-8">
-            Como funcionam os
-            <span> cupons do Burrinho?</span>
-          </h1>
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center px-5 text-center m-10">
+        <h1 className="max-w-4xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+          Escolha o plano ideal para economizar todos os meses
+        </h1>
 
-          <p className="max-w-3xl mx-auto mt-6 text-lg text-gray-400 leading-8">
-            Descubra como acessar seus cupons exclusivos, copiar os códigos e
-            economizar nas suas compras em poucos minutos.
-          </p>
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          Aproveite descontos exclusivos, cashback, benefícios especiais e
+          descubra os melhores estabelecimentos parceiros da sua região.
+        </p>
 
-          <button className="mt-10 bg-blue-burrinho-deep hover:bg-blue-burrinho-deep duration-300 text-white px-8 py-4 rounded-xl font-semibold">
-            Quero começar a economizar
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <button className="rounded-full bg-blue-600 px-8 py-3 font-semibold text-white transition hover:bg-blue-700">
+            Começar gratuitamente
+          </button>
+
+          <button className="rounded-full border border-border bg-background px-8 py-3 font-semibold transition hover:border-blue-600 hover:text-blue-600">
+            Ver parceiros
           </button>
         </div>
-      </section>
+      </div>
+      <PricingCards />
+      <ComparisonTable />
       <Footer />
-    </main>
+    </section>
   );
 }

@@ -38,11 +38,11 @@ export default function ContactHero() {
 
             <div className="relative">
               <div className="rounded-4xl p-4 shadow-soft">
-                <div className="mt-4 rounded-3xl h-105 flex items-center justify-center hidden md:block">
+                <div className="mt-4 rounded-3xl h-105 flex items-center justify-center md:block">
                   <img
-                    src={burrinho}
+                    src="src\assets\images\Burrinho pensativo.png"
                     alt="Mascote Burrinho"
-                    className="w-120 animate-float"
+                    className="w-full animate-float p-10"
                   />
                 </div>
               </div>

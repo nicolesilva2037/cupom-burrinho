@@ -23,7 +23,6 @@ export default function Store() {
           px-4
           sm:px-6
           lg:px-8
-          -mt-24
         "
       >
         <div className="max-w-7xl mx-auto">
