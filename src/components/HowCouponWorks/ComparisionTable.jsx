@@ -1,3 +1,5 @@
+import { FaCheck } from "react-icons/fa6";
+
 const features = [
   {
     name: "Cupons básicos",
@@ -50,29 +52,35 @@ export default function ComparisonTable() {
           </p>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-150 border border-border rounded-2xl overflow-hidden">
+        <div className="overflow-x-auto w-full">
+          <table className=" w-full min-w-150 border border-border rounded-2xl overflow-hidden">
             <thead className="bg-gray-50">
               <tr>
                 <th className="text-left p-4">Benefícios</th>
-                <th className="p-4">Gratuito</th>
-                <th className="p-4 text-blue-600 font-bold">Premium</th>
-                <th className="p-4">VIP</th>
+                <th className="p-4 text-center">Gratuito</th>
+                <th className="p-4 text-center text-blue-600 font-bold">
+                  Premium
+                </th>
+                <th className="p-4 text-center">VIP</th>
               </tr>
             </thead>
 
-            <tbody>
+            <tbody className="w-full">
               {features.map((f) => (
                 <tr key={f.name} className="border-t">
                   <td className="p-4 font-medium">{f.name}</td>
 
-                  <td className="text-center">{f.free ? "✅" : "—"}</td>
-
-                  <td className="text-center text-blue-600 font-semibold">
-                    {f.premium ? "✅" : "—"}
+                  <td className="p-4 text-center">
+                    {f.free ? <FaCheck className="inline-block" /> : "—"}
                   </td>
 
-                  <td className="text-center">{f.vip ? "✅" : "—"}</td>
+                  <td className="p-4 text-center text-blue-600 font-semibold">
+                    {f.premium ? <FaCheck className="inline-block" /> : "—"}
+                  </td>
+
+                  <td className="p-4 text-center">
+                    {f.vip ? <FaCheck className="inline-block" /> : "—"}
+                  </td>
                 </tr>
               ))}
             </tbody>

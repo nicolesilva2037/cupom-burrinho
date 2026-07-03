@@ -61,7 +61,7 @@ export default function StoreCard({ store }) {
             mt-5
             w-full
             rounded-full
-            bg-blue-600
+            bg-orange-400
             py-2.5 sm:py-3
             font-bold
             text-sm sm:text-base

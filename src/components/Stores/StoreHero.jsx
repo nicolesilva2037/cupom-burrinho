@@ -66,7 +66,7 @@ export default function StoreHero() {
             font-display
             font-bold
             leading-tight
-
+            mt-8
             text-3xl
             sm:text-4xl
             md:text-5xl

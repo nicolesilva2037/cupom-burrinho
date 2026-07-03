@@ -1,3 +1,5 @@
+import { FaCheck } from "react-icons/fa6";
+
 const plans = [
   {
     name: "Gratuito",
@@ -46,7 +48,7 @@ const plans = [
 
 export default function PricingCards() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-backgroud">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -68,14 +70,14 @@ export default function PricingCards() {
                 hover:-translate-y-2 hover:shadow-xl
                 ${
                   plan.highlight
-                    ? "border-blue-600 bg-blue-50 scale-105"
+                    ? "border-orange-400 bg-orange-50 scale-105"
                     : "border-border bg-white"
                 }
               `}
             >
               {/* Badge */}
               {plan.highlight && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-400 text-white text-xs px-3 py-1 rounded-full">
                   Mais escolhido
                 </div>
               )}
@@ -99,7 +101,7 @@ export default function PricingCards() {
               <ul className="mt-6 space-y-2 text-sm">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <span className="text-green-500">✔</span>
+                    <FaCheck className="text-green-500" />
                     {f}
                   </li>
                 ))}
@@ -111,7 +113,7 @@ export default function PricingCards() {
                   mt-6 w-full rounded-full py-2 font-semibold transition
                   ${
                     plan.highlight
-                      ? "bg-blue-600 text-white hover:bg-blue-700"
+                      ? "bg-orange-400 text-white hover:bg-orange-500"
                       : "bg-gray-100 hover:bg-gray-200"
                   }
                 `}

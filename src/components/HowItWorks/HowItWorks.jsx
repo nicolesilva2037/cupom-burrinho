@@ -25,10 +25,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section
-      id="como"
-      className="py-16 bg-linear-to-b from-[#fefeff] to-[#eaf5ff]"
-    >
+    <section id="como" className="py-16 bg-gradient-sky">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold">

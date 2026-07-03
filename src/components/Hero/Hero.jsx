@@ -49,7 +49,7 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
         <div className="z-10">
           <h1
-            className="mt-5 text-5xl md:text-6xl font-display font-bold leading-tight text-foreground transition-transform duration-300"
+            className="mt-6 text-5xl md:text-6xl font-display font-bold leading-tight text-foreground transition-transform duration-300"
             style={{
               transform: `translate(${render.x * 4}px, ${render.y * 4}px)`,
             }}
