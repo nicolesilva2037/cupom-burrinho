@@ -1,33 +1,16 @@
-import burrinho from "../../assets/Images/burrinho-mascot.png";
+import FooterBrand from "./FooterBrand";
+import FooterNav from "./FooterNav";
+import FooterCopyright from "./FooterCopyright";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-card">
-      <div
-        className="
-        max-w-6xl 
-        mx-auto 
-        px-4 
-        py-8 
-        flex 
-        flex-col 
-        md:flex-row 
-        items-center 
-        justify-between 
-        gap-4
-      "
-      >
-        <div className="flex items-center gap-2">
-          <img src={burrinho} alt="" className="h-8 w-8" />
-
-          <span className="font-display font-bold text-foreground">
-            Clube do Burrinho
-          </span>
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <FooterBrand />
+          <FooterNav />
         </div>
-
-        <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Clube do Burrinho. Descontos exclusivos
-          sob assinatura.
-        </p>
+        <FooterCopyright />
       </div>
     </footer>
   );

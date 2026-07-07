@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // navega via código, sem precisar de <Link>
+import { useNavigate } from "react-router-dom";
 import FormField from "../FormField/FormField";
 
 export default function LoginForm() {
@@ -18,10 +18,9 @@ export default function LoginForm() {
       return;
     }
 
-    // TODO: integrar com a lógica/API de login
     console.log("Login:", { email, senha });
 
-    navigate("/perfil"); // login deu certo, manda pro perfil
+    navigate("/perfil");
   }
 
   return (

@@ -32,7 +32,6 @@ export default function CadastroForm() {
       return;
     }
 
-    // TODO: integrar com a lógica/API de cadastro
     console.log("Cadastro:", { nome, cpf, email, senha });
 
     navigate("/login"); // redireciona automaticamente após o cadastro

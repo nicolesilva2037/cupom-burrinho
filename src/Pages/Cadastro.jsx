@@ -6,7 +6,7 @@ export default function Cadastro() {
   return (
     <AuthLayout
       current="cadastro"
-      badge="👑 Entre para o clube"
+      badge="Entre para o clube"
       title="Crie sua conta"
       subtitle="Libere cupons exclusivos das lojas parceiras."
     >
