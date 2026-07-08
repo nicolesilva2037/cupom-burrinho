@@ -38,7 +38,7 @@ export default function ContactHero() {
 
             <div className="relative">
               <div className="rounded-4xl p-4 shadow-soft">
-                <div className="mt-4 rounded-3xl h-105 flex items-center justify-center md:block">
+                <div className="mt-4 rounded-3xl h-90 w-90  items-center justify-center hidden lg:block">
                   <img
                     src="src\assets\images\Burrinho pensativo.png"
                     alt="Mascote Burrinho"
