@@ -1,4 +1,9 @@
+import { useState } from "react";
+import StoreDetailsModal from "./StoreDetailsModal";
+
 export default function StoreCard({ store }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="w-full">
       <div
@@ -47,7 +52,7 @@ export default function StoreCard({ store }) {
                 group-hover:text-blue-burrinho
               "
             >
-              {store}
+              {store.name}
             </h3>
 
             <p className="text-xs sm:text-sm text-muted-foreground">
@@ -57,6 +62,7 @@ export default function StoreCard({ store }) {
         </div>
 
         <button
+          onClick={() => setIsOpen(true)}
           className="
             mt-5
             w-full
@@ -88,6 +94,10 @@ export default function StoreCard({ store }) {
           <span className="relative z-10">Ver desconto</span>
         </button>
       </div>
+
+      {isOpen && (
+        <StoreDetailsModal store={store} onClose={() => setIsOpen(false)} />
+      )}
     </div>
   );
 }

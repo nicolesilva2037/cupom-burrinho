@@ -1,1 +1,50 @@
-["Loja 1", "Loja 2", "Loja 3", "Loja 4", "Loja 5", "Loja 6", "Loja 7", "Loja 8"]
+[
+  {
+    "id": "1",
+    "name": "Amazon",
+    "description": "Marketplace com eletrônicos, livros, casa e milhões de outros produtos.",
+    "category": "Eletrônicos"
+  },
+  {
+    "id": "2",
+    "name": "Magalu",
+    "description": "Eletrodomésticos, móveis e itens para casa com entrega para todo o Brasil.",
+    "category": "Casa"
+  },
+  {
+    "id": "3",
+    "name": "Shopee",
+    "description": "Moda, acessórios e variedades com preços baixos e frete rápido.",
+    "category": "Moda"
+  },
+  {
+    "id": "4",
+    "name": "iFood",
+    "description": "Delivery de comida dos melhores restaurantes perto de você.",
+    "category": "Comida"
+  },
+  {
+    "id": "5",
+    "name": "Netshoes",
+    "description": "Tênis, roupas e acessórios esportivos das principais marcas.",
+    "category": "Esportes"
+  },
+  {
+    "id": "6",
+    "name": "Mercado Livre",
+    "description": "De eletrônicos a itens usados, um pouco de tudo em um só lugar.",
+    "category": "Geral"
+  },
+  {
+    "id": "7",
+    "name": "Americanas",
+    "description": "Livros, papelaria e produtos para o dia a dia.",
+    "category": "Livros"
+  },
+  {
+    "id": "8",
+    "name": "Centauro",
+    "description": "Artigos esportivos, calçados e roupas para treino.",
+    "category": "Esportes"
+  }
+]

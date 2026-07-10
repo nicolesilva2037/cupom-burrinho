@@ -13,7 +13,7 @@ export default function Perfil() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-linear-to-b from-[#fefeff] to-[#eaf5ff] text-foreground">
+    <div className="bg-orange-500 min-h-screen flex flex-col font-sans bg-linear-to-b from-[#fefeff] to-[#eaf5ff] text-foreground">
       <Navbar loggedIn />
 
       <main className="flex-1">

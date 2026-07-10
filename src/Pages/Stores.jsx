@@ -48,7 +48,7 @@ export default function Store() {
             "
           >
             {stores.map((store) => (
-              <StoreCard key={store} store={store} />
+              <StoreCard key={store.id} store={store} />
             ))}
           </div>
         </div>

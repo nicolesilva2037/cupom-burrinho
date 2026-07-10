@@ -20,7 +20,7 @@ export default function Partners() {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
           {stores.slice(0, 3).map((store) => (
-            <PartnerCard key={store} name={store} />
+            <PartnerCard key={store.id} name={store.name} />
           ))}
         </div>
       </div>
