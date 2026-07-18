@@ -44,7 +44,7 @@ export default function ComparisonTable() {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-display">
+          <h2 className="text-3xl md:text-4xl font-display font-bold">
             Compare os planos
           </h2>
           <p className="text-muted-foreground mt-3">
@@ -53,7 +53,7 @@ export default function ComparisonTable() {
         </div>
 
         <div className="overflow-x-auto w-full">
-          <table className=" w-full min-w-150 border border-border rounded-2xl overflow-hidden">
+          <table className=" w-full min-w-150 border-2 border-border rounded-2xl overflow-hidden">
             <thead className="bg-gray-50">
               <tr>
                 <th className="text-left p-4">Benefícios</th>

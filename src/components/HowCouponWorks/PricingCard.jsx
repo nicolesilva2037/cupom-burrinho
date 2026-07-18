@@ -52,7 +52,7 @@ export default function PricingCards() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-display">
+          <h2 className="text-3xl md:text-4xl font-display font-bold">
             Escolha seu plano
           </h2>
           <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ export default function PricingCards() {
             <div
               key={plan.name}
               className={`
-                relative rounded-2xl border p-6 transition-all duration-300
+                relative rounded-2xl border-2 p-6 transition-all duration-300
                 hover:-translate-y-2 hover:shadow-xl
                 ${
                   plan.highlight
@@ -83,7 +83,7 @@ export default function PricingCards() {
               )}
 
               {/* Title */}
-              <h3 className="text-xl font-bold">{plan.name}</h3>
+              <h3 className="font-display font-bold text-xl">{plan.name}</h3>
 
               <p className="text-muted-foreground text-sm mt-1">
                 {plan.description}
@@ -110,7 +110,7 @@ export default function PricingCards() {
               {/* Button */}
               <button
                 className={`
-                  mt-6 w-full rounded-full py-2 font-semibold transition
+                  mt-6 w-full rounded-full py-2.5 text-sm font-bold transition
                   ${
                     plan.highlight
                       ? "bg-orange-400 text-white hover:bg-orange-500"

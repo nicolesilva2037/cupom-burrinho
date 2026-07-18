@@ -1,9 +1,9 @@
 export default function FAQ() {
   return (
     <div className="bg-linear-to-b from-[#fefeff] to-[#eaf5ff]">
-      <section className="max-w-5xl mx-auto px-4 pb-24">
+      <section className="max-w-5xl mx-auto px-4 pb-16">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-display font-bold">
+          <h2 className="text-3xl md:text-4xl font-display font-bold">
             Dúvidas frequentes
           </h2>
 

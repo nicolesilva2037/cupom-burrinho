@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormField from "../FormField/FormField";
+import { useAuth } from "../../context/AuthContext";
 
 export default function LoginForm() {
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -18,7 +20,7 @@ export default function LoginForm() {
       return;
     }
 
-    console.log("Login:", { email, senha });
+    login({ email, senha });
 
     navigate("/perfil");
   }
@@ -49,7 +51,7 @@ export default function LoginForm() {
 
       <button
         type="submit"
-        className="mt-2 rounded-full bg-primary px-6 py-3 font-bold text-primary-foreground shadow-soft hover:scale-105 transition-transform"
+        className="mt-2 rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-soft hover:scale-105 transition-transform"
       >
         Entrar
       </button>

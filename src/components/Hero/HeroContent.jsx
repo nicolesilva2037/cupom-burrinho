@@ -4,7 +4,7 @@ export default function HeroContent({ render }) {
   return (
     <div className="z-10">
       <h1
-        className="mt-6 text-5xl md:text-6xl font-display font-bold leading-tight text-foreground transition-transform duration-300"
+        className="mt-6 text-3xl md:text-6xl font-display font-bold leading-tight text-foreground transition-transform duration-300"
         style={{
           transform: `translate(${render.x * 4}px, ${render.y * 4}px)`,
         }}
@@ -30,7 +30,7 @@ export default function HeroContent({ render }) {
       <div className="mt-8 flex flex-wrap gap-4">
         <Link
           to="como-funciona"
-          className="group relative rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground shadow-lg
+          className="group relative rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-lg
           transition-all duration-300 hover:scale-[1.04] hover:shadow-xl active:scale-95"
         >
           <span className="relative z-10">Assinar o Clube</span>

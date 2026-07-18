@@ -91,7 +91,7 @@ export default function CadastroForm() {
 
       <button
         type="submit"
-        className="mt-2 rounded-full bg-primary px-6 py-3 font-bold text-primary-foreground shadow-soft hover:scale-105 transition-transform"
+        className="mt-2 rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-soft hover:scale-105 transition-transform"
       >
         Criar conta
       </button>

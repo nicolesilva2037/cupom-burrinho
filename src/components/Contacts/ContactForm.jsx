@@ -1,12 +1,12 @@
 export default function ContactForm() {
   return (
     <div className="bg-linear-to-b from-[#eaf5ff] to-[#fefeff]">
-      <section id="formulario" className="-mt-10 relative z-10 pb-24">
+      <section id="formulario" className="-mt-10 relative z-10 pb-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-card border-2 border-border rounded-3xl overflow-hidden shadow-soft">
+          <div className="bg-card border-2 border-border rounded-2xl overflow-hidden shadow-soft">
             <div className="grid lg:grid-cols-[1.7fr_1fr] bg-white">
               <div className="p-8 md:p-12">
-                <h2 className="text-3xl font-display font-bold">
+                <h2 className="text-3xl md:text-4xl font-display font-bold">
                   Envie sua mensagem
                 </h2>
 
@@ -43,7 +43,7 @@ export default function ContactForm() {
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-orange-400 py-4 font-bold text-primary-foreground"
+                    className="w-full rounded-full bg-orange-400 py-2.5 text-sm font-bold text-primary-foreground"
                   >
                     Enviar para o Burrinho
                   </button>
@@ -54,19 +54,19 @@ export default function ContactForm() {
                 id="contatos"
                 className="border-t lg:border-t-0 lg:border-l border-border p-8 bg-[#ECF5FF]/50"
               >
-                <h3 className="mt-5 font-display text-3xl font-bold">
+                <h3 className="mt-5 font-display font-bold text-xl">
                   Atendimento rápido
                 </h3>
 
                 <div className="mt-15 space-y-4">
-                  <div className="rounded-2xl p-5 border bg-white border-border">
+                  <div className="rounded-2xl p-5 border-2 bg-white border-border">
                     <div className="font-bold"> E-mail</div>
                     <div className="text-sm text-muted-foreground">
                       contato@cupomdoburrinho.com.br
                     </div>
                   </div>
 
-                  <div className=" rounded-2xl p-5 border bg-white border-border">
+                  <div className="rounded-2xl p-5 border-2 bg-white border-border">
                     <div className="font-bold"> WhatsApp</div>
                     <div className="text-sm text-muted-foreground">
                       (11) 99999-9999

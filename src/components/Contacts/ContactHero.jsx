@@ -3,11 +3,11 @@ import burrinho from "../../assets/images/burrinho-mascot.png";
 export default function ContactHero() {
   return (
     <div className="bg-linear-to-b from-[#fefeff] to-[#eaf5ff]">
-      <section className="relative overflow-hidden py-20 md:py-20 -mt-17">
+      <section className="relative overflow-hidden py-16 -mt-17">
         <div className="relative max-w-6xl mx-auto px-4 m-15">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="sm:px-8">
-              <h1 className=" text-5xl md:text-6xl font-display font-bold leading-none">
+              <h1 className="text-3xl md:text-4xl font-display font-bold leading-none">
                 Achou um cupom quebrado?
                 <span className="text-primary"> O Burrinho resolve. </span>
               </h1>
@@ -22,14 +22,14 @@ export default function ContactHero() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="#formulario"
-                  className="rounded-full bg-primary px-8 py-4 font-bold shadow-xl text-primary-foreground hover:scale-105 transition"
+                  className="rounded-full bg-primary px-6 py-2.5 text-sm font-bold shadow-xl text-primary-foreground hover:scale-105 transition"
                 >
                   Enviar mensagem
                 </a>
 
                 <a
                   href="#contatos"
-                  className="rounded-full border-2 border-border bg-card px-8 py-4 font-bold"
+                  className="rounded-full border-2 border-border bg-card px-6 py-2.5 text-sm font-bold"
                 >
                   Ver contatos
                 </a>

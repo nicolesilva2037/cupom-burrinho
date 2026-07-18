@@ -1,75 +1,154 @@
 import { useState } from "react";
 import FormField from "../FormField/FormField";
+import { useAuth } from "../../context/AuthContext";
+
+function censurarCpf(cpf) {
+  const digitos = cpf.replace(/\D/g, "");
+  if (digitos.length !== 11) return cpf;
+  return `${digitos.slice(0, 3)}.***.***-${digitos.slice(9)}`;
+}
 
 export default function ProfileForm({ usuario }) {
-  const [nome, setNome] = useState(usuario.nome);
+  const { updateProfile } = useAuth();
+
+  const [isEditing, setIsEditing] = useState(false);
   const [email, setEmail] = useState(usuario.email);
+  const [senhaAtual, setSenhaAtual] = useState("");
   const [novaSenha, setNovaSenha] = useState("");
+  const [confirmarSenha, setConfirmarSenha] = useState("");
+  const [erro, setErro] = useState("");
   const [status, setStatus] = useState("");
+
+  function limparCamposSenha() {
+    setSenhaAtual("");
+    setNovaSenha("");
+    setConfirmarSenha("");
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
-    // TODO: integrar com a lógica/API de atualização de perfil
+    setErro("");
+
+    const resultado = updateProfile({
+      email,
+      senhaAtual,
+      novaSenha,
+      confirmarSenha,
+    });
+
+    if (!resultado.success) {
+      setErro(resultado.error);
+      return;
+    }
+
+    limparCamposSenha();
     setStatus("Alterações salvas.");
+    setIsEditing(false);
   }
 
   function handleCancelar() {
-    // type="reset" não funciona com inputs controlados, então resetamos o state na mão
-    setNome(usuario.nome);
     setEmail(usuario.email);
-    setNovaSenha("");
-    setStatus("");
+    limparCamposSenha();
+    setErro("");
+    setIsEditing(false);
   }
 
   return (
-    <div className="mt-8 bg-card rounded-3xl border-2 border-border shadow-soft p-7 md:p-8">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
-        <FormField
-          id="nome"
-          label="Nome completo"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-        />
+    <div className="mt-8 bg-card rounded-2xl border-2 border-border shadow-soft p-7 md:p-8">
+      {isEditing ? (
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
+          <FormField
+            id="email"
+            label="E-mail"
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <FormField id="cpf" label="CPF" value={usuario.cpf} disabled />
+          <hr className="border-border" />
 
-        <FormField
-          id="email"
-          label="E-mail"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          <p className="text-sm font-semibold text-foreground -mb-2">
+            Alterar senha (opcional)
+          </p>
 
-        <FormField
-          id="novaSenha"
-          label="Nova senha (opcional)"
-          type="password"
-          placeholder="Deixe em branco para manter a senha atual"
-          value={novaSenha}
-          onChange={(e) => setNovaSenha(e.target.value)}
-        />
+          <FormField
+            id="senhaAtual"
+            label="Senha atual"
+            type="password"
+            placeholder="Deixe em branco para manter a senha atual"
+            value={senhaAtual}
+            onChange={(e) => setSenhaAtual(e.target.value)}
+          />
 
-        {status && (
-          <p className="text-sm font-medium text-green-700">{status}</p>
-        )}
+          <FormField
+            id="novaSenha"
+            label="Nova senha"
+            type="password"
+            value={novaSenha}
+            onChange={(e) => setNovaSenha(e.target.value)}
+          />
 
-        <div className="flex gap-3 mt-2">
-          <button
-            type="submit"
-            className="rounded-full bg-primary px-6 py-2.5 font-bold text-primary-foreground shadow-soft hover:scale-105 transition-transform"
-          >
-            Salvar alterações
-          </button>
+          <FormField
+            id="confirmarSenha"
+            label="Confirmar nova senha"
+            type="password"
+            value={confirmarSenha}
+            onChange={(e) => setConfirmarSenha(e.target.value)}
+          />
+
+          {erro && <p className="text-sm font-medium text-red-600">{erro}</p>}
+
+          <div className="flex gap-3 mt-2">
+            <button
+              type="submit"
+              className="rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-soft hover:scale-105 transition-transform"
+            >
+              Salvar alterações
+            </button>
+            <button
+              type="button"
+              onClick={handleCancelar}
+              className="rounded-full border-2 border-border px-6 py-2.5 text-sm font-bold text-muted-foreground hover:bg-background transition-colors"
+            >
+              Cancelar
+            </button>
+          </div>
+        </form>
+      ) : (
+        <div className="flex flex-col gap-4">
+          <div>
+            <p className="text-sm font-semibold text-foreground">
+              Nome completo
+            </p>
+            <p className="text-sm text-muted-foreground">{usuario.nome}</p>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold text-foreground">CPF</p>
+            <p className="text-sm text-muted-foreground">
+              {censurarCpf(usuario.cpf)}
+            </p>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold text-foreground">E-mail</p>
+            <p className="text-sm text-muted-foreground">{usuario.email}</p>
+          </div>
+
+          {status && (
+            <p className="text-sm font-medium text-green-700">{status}</p>
+          )}
+
           <button
             type="button"
-            onClick={handleCancelar}
-            className="rounded-full border-2 border-border px-6 py-2.5 font-bold text-muted-foreground hover:bg-background transition-colors"
+            onClick={() => setIsEditing(true)}
+            className="mt-2 self-start rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-soft hover:scale-105 transition-transform"
           >
-            Cancelar
+            Editar informações
           </button>
         </div>
-      </form>
+      )}
     </div>
   );
 }

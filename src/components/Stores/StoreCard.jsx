@@ -46,7 +46,7 @@ export default function StoreCard({ store }) {
               className="
                 font-display
                 font-bold
-                text-base sm:text-lg
+                text-xl
                 wrap-break-word
                 transition-colors duration-300
                 group-hover:text-blue-burrinho
@@ -68,9 +68,9 @@ export default function StoreCard({ store }) {
             w-full
             rounded-full
             bg-orange-400
-            py-2.5 sm:py-3
+            py-2.5
             font-bold
-            text-sm sm:text-base
+            text-sm
             text-primary-foreground
             transition-all duration-300
             hover:scale-[1.03]

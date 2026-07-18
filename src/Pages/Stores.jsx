@@ -17,9 +17,7 @@ export default function Store() {
           bg-linear-to-b
           from-[#fefeff]
           to-[#eaf5ff]
-          py-14
-          sm:py-16
-          lg:py-20
+          py-16
           px-4
           sm:px-6
           lg:px-8

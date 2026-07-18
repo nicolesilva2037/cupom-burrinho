@@ -3,7 +3,7 @@ export default function Newsletter() {
   return (
     <section className=" mx-auto px-4 pb-16 ">
       <div className="max-w-7xl mx-auto sm:px-6">
-        <div className="relative overflow-hidden rounded-3xl p-10 md:p-14 bg-orange-400 ">
+        <div className="relative overflow-hidden rounded-2xl p-10 md:p-14 bg-orange-400 ">
           <div className="relative z-10 grid md:grid-cols-[1fr_auto] gap-8 items-center ">
             <div className="text-primary-foreground">
               <h2 className="text-3xl md:text-4xl font-display font-bold tracking-[-0.01em] ">
@@ -24,10 +24,10 @@ export default function Newsletter() {
 
                 <button
                   className="
-                rounded-full 
-                px-6 
-                py-3 
-                bg-blue-burrinho-deep 
+                rounded-full
+                px-6
+                py-2.5
+                bg-blue-burrinho-deep
                 font-bold 
                 text-sm 
                 hover:scale-105 

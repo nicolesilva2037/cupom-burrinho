@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import coupons from "../../data/couponsData.json";
+import { useAuth } from "../../context/AuthContext";
 
 export default function StoreDetailsModal({ store, onClose }) {
+  const { isAuthenticated, user, redeemCoupon } = useAuth();
+
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.key === "Escape") onClose();
@@ -52,7 +55,7 @@ export default function StoreDetailsModal({ store, onClose }) {
         <div className="flex items-center gap-3">
           <span className="text-3xl">🛍️</span>
           <div>
-            <h3 className="font-display font-bold text-xl sm:text-2xl">
+            <h3 className="font-display font-bold text-xl">
               {store.name}
             </h3>
             <p className="text-xs sm:text-sm text-muted-foreground">
@@ -76,45 +79,76 @@ export default function StoreDetailsModal({ store, onClose }) {
             </p>
           )}
 
-          {storeCoupons.map((coupon) => (
-            <div
-              key={coupon.id}
-              className="
-                rounded-xl border-2 border-border
-                p-4
-                flex items-center justify-between gap-4
-              "
-            >
-              <div className="min-w-0">
-                <p className="font-bold text-sm sm:text-base wrap-break-word">
-                  {coupon.title}
-                </p>
-                <p className="text-xs sm:text-sm text-muted-foreground">
-                  Desconto: {coupon.discount}
-                </p>
-              </div>
+          {storeCoupons.map((coupon) => {
+            const jaResgatado = !!user?.redeemedCoupons?.includes(coupon.id);
 
-              <div className="shrink-0 text-right">
-                <button
-                  disabled
-                  className="
-                    rounded-full
-                    bg-black/10
-                    px-4 py-2
-                    text-xs sm:text-sm font-bold
-                    text-muted-foreground
-                    cursor-not-allowed
-                    flex items-center gap-1.5
-                  "
-                >
-                  🔒 Resgatar
-                </button>
+            return (
+              <div
+                key={coupon.id}
+                className="
+                  rounded-2xl border-2 border-border
+                  p-4
+                  flex items-center justify-between gap-4
+                "
+              >
+                <div className="min-w-0">
+                  <p className="font-bold text-sm sm:text-base wrap-break-word">
+                    {coupon.title}
+                  </p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
+                    Desconto: {coupon.discount}
+                  </p>
+                  {isAuthenticated && jaResgatado && (
+                    <p className="mt-1 text-xs sm:text-sm font-bold text-blue-burrinho-deep">
+                      Código: {coupon.code}
+                    </p>
+                  )}
+                </div>
+
+                <div className="shrink-0 text-right">
+                  {isAuthenticated ? (
+                    <button
+                      onClick={() => redeemCoupon(coupon.id)}
+                      disabled={jaResgatado}
+                      className="
+                        rounded-full
+                        bg-primary
+                        px-4 py-2
+                        text-xs sm:text-sm font-bold
+                        text-primary-foreground
+                        transition-transform
+                        hover:scale-105
+                        disabled:cursor-not-allowed
+                        disabled:opacity-70
+                        disabled:hover:scale-100
+                        flex items-center gap-1.5
+                      "
+                    >
+                      {jaResgatado ? "✅ Resgatado" : "Resgatar"}
+                    </button>
+                  ) : (
+                    <button
+                      disabled
+                      className="
+                        rounded-full
+                        bg-black/10
+                        px-4 py-2
+                        text-xs sm:text-sm font-bold
+                        text-muted-foreground
+                        cursor-not-allowed
+                        flex items-center gap-1.5
+                      "
+                    >
+                      🔒 Resgatar
+                    </button>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {storeCoupons.length > 0 && (
+        {storeCoupons.length > 0 && !isAuthenticated && (
           <p className="mt-4 text-sm text-center text-muted-foreground">
             Faça{" "}
             <Link

@@ -5,9 +5,7 @@ export default function StoreHero() {
         relative
         overflow-hidden
         bg-gradient-sky
-        py-14
-        sm:py-16
-        lg:py-24
+        py-16
         -mt-16
       "
     >
@@ -68,9 +66,7 @@ export default function StoreHero() {
             leading-tight
             mt-8
             text-3xl
-            sm:text-4xl
-            md:text-5xl
-            lg:text-6xl
+            md:text-4xl
           "
         >
           Lojas que ajudam você a economizar com o Burrinho!
