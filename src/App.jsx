@@ -6,6 +6,7 @@ import Cadastro from "./Pages/Cadastro";
 import Perfil from "./Pages/Perfil";
 import HowCouponWorks from "./Pages/HowCouponWorks";
 import { Routes, Route } from "react-router-dom";
+import AreaCupom from "./Pages/AreaCupom";
 
 export default function App() {
   return (

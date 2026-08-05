@@ -9,10 +9,8 @@ export default function FooterLinks() {
   ];
 
   return (
-    <div className="flex flex-col items-center md:items-start gap-3">
-      <h4 className="font-display font-bold text-foreground">
-        Institucional
-      </h4>
+    <div className=" mx-auto flex flex-col items-center md:items-start gap-3">
+      <h4 className="font-display font-bold text-foreground">Institucional</h4>
 
       <ul className="flex flex-col items-center md:items-start gap-2.5">
         {links.map((link) => (
