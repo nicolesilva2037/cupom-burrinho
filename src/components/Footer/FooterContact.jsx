@@ -8,7 +8,7 @@ export default function FooterContact() {
   ];
 
   return (
-    <div className="flex flex-col items-center md:items-start gap-3">
+    <div className=" mx-auto flex flex-col items-center md:items-start gap-3">
       <h4 className="font-display font-bold text-foreground">
         Fale com a gente
       </h4>
