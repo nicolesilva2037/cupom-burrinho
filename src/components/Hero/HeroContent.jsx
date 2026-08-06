@@ -4,7 +4,7 @@ export default function HeroContent({ render }) {
   return (
     <div className="z-10">
       <h1
-        className="mt-18 text-3xl md:text-6xl font-display font-bold leading-tight text-foreground transition-transform duration-300"
+        className="mt-18 text-2xl md:text-5xl font-display font-bold leading-tight text-foreground transition-transform duration-300"
         style={{
           transform: `translate(${render.x * 4}px, ${render.y * 4}px)`,
         }}

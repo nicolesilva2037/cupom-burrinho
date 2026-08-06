@@ -13,8 +13,8 @@ export default function AboutCTA() {
               </h2>
 
               <p className="mt-2 opacity-90">
-                Cadastre-se e comece a economizar nas suas lojas favoritas
-                agora mesmo.
+                Cadastre-se e comece a economizar nas suas lojas favoritas agora
+                mesmo.
               </p>
 
               <div className="mt-5 flex flex-col sm:flex-row gap-2 max-w-md">

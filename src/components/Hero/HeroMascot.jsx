@@ -13,8 +13,8 @@ export default function HeroMascot({ render }) {
         alt="Mascote burrinho azul segurando cupom"
         onMouseEnter={() => setIsHoveringMascot(true)}
         onMouseLeave={() => setIsHoveringMascot(false)}
-        className={`relative w-220 max-w-full drop-shadow-2xl transition-transform duration-500 ease-out
-          ${isHoveringMascot ? "scale-110 rotate-1" : "scale-100"}
+        className={`relative w-150 max-w-full drop-shadow-2xl transition-transform duration-500 ease-out
+          ${isHoveringMascot ? "scale-105 rotate-1" : "scale-100"}
           animate-float`}
         style={{
           transform: `

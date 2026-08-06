@@ -4,10 +4,10 @@ export default function AboutHero() {
   return (
     <div className="bg-linear-to-b from-[#fefeff] to-[#eaf5ff]">
       <section className="relative overflow-hidden py-20 md:py-20 -mt-17">
-        <div className="relative max-w-6xl mx-auto px-4 m-15">
+        <div className="relative max-w-6xl mx-auto px-4 m-5">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="sm:px-8">
-              <h1 className="text-5xl md:text-6xl font-display font-bold leading-none">
+              <h1 className="text-3xl md:text-4xl font-display font-bold leading-none">
                 A gente acredita que economizar
                 <span className="text-primary">
                   {" "}
@@ -40,7 +40,7 @@ export default function AboutHero() {
 
             <div className="relative">
               <div className="rounded-4xl p-4 shadow-soft">
-                <div className="mt-4 rounded-3xl h-105 flex items-center justify-center md:block">
+                <div className="mt-4 rounded-3xl h-105 flex items-center justify-center hidden md:block">
                   <img
                     src={burrinhoGif}
                     alt="Mascote Burrinho animado"
