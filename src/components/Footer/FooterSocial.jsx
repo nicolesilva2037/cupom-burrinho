@@ -14,7 +14,7 @@ export default function FooterSocial() {
   ];
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex w-full items-center justify-center gap-3 md:justify-start">
       {socials.map(({ name, href, icon: Icon }) => (
         <a
           key={name}

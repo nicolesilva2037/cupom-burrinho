@@ -3,48 +3,56 @@
     "id": "1",
     "name": "Amazon",
     "description": "Marketplace com eletrônicos, livros, casa e milhões de outros produtos.",
-    "category": "Eletrônicos"
+    "category": "Eletrônicos",
+    "address": "Av. Presidente Juscelino Kubitschek, 2041 - Vila Olímpia, São Paulo - SP"
   },
   {
     "id": "2",
     "name": "Magalu",
     "description": "Eletrodomésticos, móveis e itens para casa com entrega para todo o Brasil.",
-    "category": "Casa"
+    "category": "Casa",
+    "address": "Rua Imprensa, 911 - Vila São Francisco, Franca - SP"
   },
   {
     "id": "3",
     "name": "Shopee",
     "description": "Moda, acessórios e variedades com preços baixos e frete rápido.",
-    "category": "Moda"
+    "category": "Moda",
+    "address": "Av. Brigadeiro Faria Lima, 3477 - Itaim Bibi, São Paulo - SP"
   },
   {
     "id": "4",
     "name": "iFood",
     "description": "Delivery de comida dos melhores restaurantes perto de você.",
-    "category": "Comida"
+    "category": "Comida",
+    "address": "Av. das Nações Unidas, 14401 - Vila Gertrudes, São Paulo - SP"
   },
   {
     "id": "5",
     "name": "Netshoes",
     "description": "Tênis, roupas e acessórios esportivos das principais marcas.",
-    "category": "Esportes"
+    "category": "Esportes",
+    "address": "Av. das Nações Unidas, 21053 - Jurubatuba, São Paulo - SP"
   },
   {
     "id": "6",
     "name": "Mercado Livre",
     "description": "De eletrônicos a itens usados, um pouco de tudo em um só lugar.",
-    "category": "Geral"
+    "category": "Geral",
+    "address": "Av. Presidente Juscelino Kubitschek, 1830 - Itaim Bibi, São Paulo - SP"
   },
   {
     "id": "7",
     "name": "Americanas",
     "description": "Livros, papelaria e produtos para o dia a dia.",
-    "category": "Livros"
+    "category": "Livros",
+    "address": "Rua Sacadura Cabral, 102 - Saúde, Rio de Janeiro - RJ"
   },
   {
     "id": "8",
     "name": "Centauro",
     "description": "Artigos esportivos, calçados e roupas para treino.",
-    "category": "Esportes"
+    "category": "Esportes",
+    "address": "Rua Verbo Divino, 1488 - Chácara Santo Antônio, São Paulo - SP"
   }
 ]

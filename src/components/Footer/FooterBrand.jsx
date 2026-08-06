@@ -3,16 +3,16 @@ import FooterSocial from "./FooterSocial";
 
 export default function FooterBrand() {
   return (
-    <div className="flex flex-col gap-4 max-w px-4">
-      <div className="flex items-center gap-2">
+    <div className="mx-auto flex flex-col items-center gap-4 max-w-xs px-4 md:mx-0 md:items-start">
+      <div className="flex w-full items-center justify-center gap-2 md:justify-start">
         <img
           src={burrinho}
-          alt="Mascote Clube do Burrinho"
+          alt="Mascote Cupom do Burrinho"
           className="h-10 w-10"
         />
 
-        <span className="flex justify-start font-display font-bold text-lg text-foreground">
-          Clube do Burrinho
+        <span className="font-display font-bold text-lg text-foreground">
+          Cupom do Burrinho
         </span>
       </div>
 

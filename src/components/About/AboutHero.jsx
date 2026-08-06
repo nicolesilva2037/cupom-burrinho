@@ -9,13 +9,16 @@ export default function AboutHero() {
             <div className="sm:px-8">
               <h1 className="text-5xl md:text-6xl font-display font-bold leading-none">
                 A gente acredita que economizar
-                <span className="text-primary"> não precisa ser complicado. </span>
+                <span className="text-primary">
+                  {" "}
+                  não precisa ser complicado.{" "}
+                </span>
               </h1>
 
               <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-                O Clube do Burrinho nasceu de uma ideia simples: reunir os
-                melhores cupons e descontos em um só lugar, sem letra
-                miúda e sem enrolação. Conhece a nossa história.
+                O Cupom do Burrinho nasceu de uma ideia simples: reunir os
+                melhores cupons e descontos em um só lugar, sem letra miúda e
+                sem enrolação.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">

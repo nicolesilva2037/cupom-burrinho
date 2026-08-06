@@ -8,17 +8,14 @@ export default function FooterContact() {
   ];
 
   return (
-    <div className=" mx-auto flex flex-col items-center md:items-start gap-3">
+    <div className=" mx-auto flex flex-col gap-3">
       <h4 className="font-display font-bold text-foreground">
         Fale com a gente
       </h4>
 
-      <ul className="flex flex-col gap-2.5">
+      <ul className="flex flex-col items-center md:items-start md:justify-start gap-2.5">
         {items.map(({ icon: Icon, text }) => (
-          <li
-            key={text}
-            className="flex items-center gap-2.5 text-sm text-muted-foreground"
-          >
+          <li key={text} className="flex gap-2.5 text-sm text-muted-foreground">
             <Icon className="text-blue-burrinho shrink-0" size={14} />
             {text}
           </li>
