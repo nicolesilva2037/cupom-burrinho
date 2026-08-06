@@ -18,5 +18,10 @@
     "label": "Fale Conosco",
     "url": "/contact",
     "customClass": "hover:text-primary transition-colors"
+  },
+  {
+    "label": "Sobre Nós",
+    "url": "/sobre",
+    "customClass": "hover:text-primary transition-colors"
   }
 ]

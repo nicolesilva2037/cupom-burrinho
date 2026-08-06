@@ -4,6 +4,7 @@ import Stores from "./Pages/Stores";
 import Login from "./Pages/Login";
 import Cadastro from "./Pages/Cadastro";
 import Perfil from "./Pages/Perfil";
+import Sobre from "./Pages/Sobre";
 import HowCouponWorks from "./Pages/HowCouponWorks";
 import { Routes, Route } from "react-router-dom";
 import AreaCupom from "./Pages/AreaCupom";
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/Cadastro" element={<Cadastro />} />
           <Route path="/Perfil" element={<Perfil />} />
           <Route path="/como-funciona" element={<HowCouponWorks />} />
+          <Route path="/sobre" element={<Sobre />} />
         </Routes>
       </main>
     </div>
