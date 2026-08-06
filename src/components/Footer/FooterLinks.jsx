@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function FooterLinks() {
   const links = [
-    { name: "Sobre Nós", path: "/sobre-nos" },
+    { name: "Sobre Nós", path: "/sobre" },
     { name: "Como Funciona", path: "/como-funciona" },
     { name: "Fale Conosco", path: "/contact" },
     { name: "Entrar no Clube", path: "/login" },
