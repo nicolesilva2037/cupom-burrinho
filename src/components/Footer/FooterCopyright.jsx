@@ -3,7 +3,7 @@ export default function FooterCopyright() {
     <div className="mt-10 pt-6 border-t border-border">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-sm text-muted-foreground text-center sm:text-left">
-          © {new Date().getFullYear()} Clube do Burrinho. Todos os direitos
+          © {new Date().getFullYear()} Cupom do Burrinho. Todos os direitos
           reservados.
         </p>
 

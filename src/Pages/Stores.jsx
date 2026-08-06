@@ -9,12 +9,20 @@ import Navbar from "../components/Navbar/Navbar";
 export default function Store() {
   const location = useLocation();
   const [toast, setToast] = useState(null);
+  const [toastLeaving, setToastLeaving] = useState(false);
 
   useEffect(() => {
     if (location.state?.toast) {
       setToast(location.state);
-      const timer = setTimeout(() => setToast(null), 3000);
-      return () => clearTimeout(timer);
+      setToastLeaving(false);
+
+      const leaveTimer = setTimeout(() => setToastLeaving(true), 2700);
+      const removeTimer = setTimeout(() => setToast(null), 3050);
+
+      return () => {
+        clearTimeout(leaveTimer);
+        clearTimeout(removeTimer);
+      };
     }
 
     return undefined;
@@ -25,7 +33,11 @@ export default function Store() {
       <Navbar />
       {toast && (
         <div className="pointer-events-none fixed inset-x-0 bottom-4 z-50 flex justify-center px-4">
-          <div className="pointer-events-auto inline-flex items-center gap-2 rounded-3xl border border-sky-200 bg-sky-500 px-5 py-3 text-sm text-white shadow-2xl shadow-sky-950/20 backdrop-blur-sm">
+          <div
+            className={`pointer-events-auto inline-flex items-center gap-2 rounded-3xl border border-sky-200 bg-sky-500 px-5 py-3 text-sm text-white shadow-2xl shadow-sky-950/20 backdrop-blur-sm ${
+              toastLeaving ? "animate-fade-out" : "animate-fade-in"
+            }`}
+          >
             <span>{toast.message || "Resgatado!"}</span>
             <Link
               to={toast.link || "/Perfil"}
@@ -52,17 +64,6 @@ export default function Store() {
         "
       >
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold">
-              Alguns de nossos parceiros
-            </h2>
-
-            <p className="mt-3 max-w-2xl mx-auto text-muted-foreground">
-              Grandes marcas e estabelecimentos locais que dão descontos para
-              nossos assinantes.
-            </p>
-          </div>
-
           <div
             className="
               grid

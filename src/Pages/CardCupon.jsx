@@ -1,55 +1,36 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import coupons from "../data/couponsData.json";
+import { useAuth } from "../context/AuthContext";
 
-function CardCupon({ onClose }) {
+function CardCupom({ store, onRedeemed }) {
   const navigate = useNavigate();
-  const redirectTimeoutRef = useRef(null);
-  const [redeemedIds, setRedeemedIds] = useState([]);
+  const { isAuthenticated, user, redeemCoupon } = useAuth();
   const [closingIds, setClosingIds] = useState([]);
 
-  useEffect(() => {
-    return () => {
-      if (redirectTimeoutRef.current) {
-        clearTimeout(redirectTimeoutRef.current);
-      }
-    };
-  }, []);
-
-  const cupons = [
-    {
-      id: 1,
-      codigo: "MENOSÉMAIS",
-      descricao: "10% OFF em compras acima de R$100",
-    },
-  ];
+  const storeCoupons = coupons.filter((cupom) => cupom.store === store?.name);
+  const redeemedCoupons = user?.redeemedCoupons || [];
 
   const handleRedeem = (cupom) => {
-    navigator.clipboard.writeText(cupom.codigo);
+    if (!isAuthenticated) {
+      navigate("/login");
+      return;
+    }
+
+    navigator.clipboard?.writeText(cupom.code);
     setClosingIds((current) => [...current, cupom.id]);
 
     setTimeout(() => {
-      setRedeemedIds((current) => [...current, cupom.id]);
-      setClosingIds((current) => current.filter((id) => id !== cupom.id));
-    }, 240);
-
-    redirectTimeoutRef.current = setTimeout(() => {
-      onClose?.();
-      navigate("/lojas", {
-        state: {
-          toast: true,
-          message: "✅Cupom Resgatado, dê uma olhada no seu perfil!",
-          link: "/Perfil",
-          linkText: "Perfil",
-        },
-      });
-    }, 0);
+      redeemCoupon(cupom.id);
+      onRedeemed?.(cupom);
+    }, 260);
   };
 
   return (
     <div className="relative">
       <div className="space-y-4 pt-4">
-        {cupons
-          .filter((cupom) => !redeemedIds.includes(cupom.id))
+        {storeCoupons
+          .filter((cupom) => !redeemedCoupons.includes(cupom.id))
           .map((cupom) => {
             const isClosing = closingIds.includes(cupom.id);
             return (
@@ -62,36 +43,46 @@ function CardCupon({ onClose }) {
                 }`}
               >
                 <div className="flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <img
-                      src="./src/assets/images/casas bahia teste.png"
-                      alt="Logo da loja"
-                      className="h-14 w-14 object-contain"
-                    />
-
-                    <div>
-                      <h2 className="text-lg font-bold text-slate-900">
-                        {cupom.codigo}
-                      </h2>
-                      <p className="mt-2 text-sm text-gray-500">
-                        {cupom.descricao}
-                      </p>
-                    </div>
+                  <div className="min-w-0">
+                    <h2 className="text-lg font-bold text-slate-900 wrap-break-word">
+                      {cupom.title}
+                    </h2>
+                    <p className="mt-2 text-sm text-gray-500">
+                      Desconto: {cupom.discount}
+                    </p>
                   </div>
 
-                  <button
-                    onClick={() => handleRedeem(cupom)}
-                    className="rounded-xl bg-sky-600 px-4 py-3 text-sm font-bold text-white transition duration-300 hover:bg-sky-700 active:scale-95"
-                  >
-                    Resgatar
-                  </button>
+                  {isAuthenticated ? (
+                    <button
+                      onClick={() => handleRedeem(cupom)}
+                      className="shrink-0 rounded-xl bg-sky-600 px-4 py-3 text-sm font-bold text-white transition duration-300 hover:bg-sky-700 active:scale-95"
+                    >
+                      Resgatar
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => handleRedeem(cupom)}
+                      title="Faça login para resgatar este cupom"
+                      className="shrink-0 flex items-center gap-2 rounded-xl bg-gray-200 px-4 py-3 text-sm font-bold text-gray-500 transition duration-300 hover:bg-gray-300 active:scale-95"
+                    >
+                      🔒 Entrar
+                    </button>
+                  )}
                 </div>
               </div>
             );
           })}
+
+        {storeCoupons.length > 0 &&
+          storeCoupons.every((cupom) => redeemedCoupons.includes(cupom.id)) && (
+            <p className="text-sm text-center text-muted-foreground py-2">
+              Você já resgatou todos os cupons desta loja. Confira no seu{" "}
+              perfil.
+            </p>
+          )}
       </div>
     </div>
   );
 }
 
-export default CardCupon;
+export default CardCupom;

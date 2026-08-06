@@ -14,9 +14,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md border-b border-border ">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <h3 className="font-bold text-md md:order-1 order-2 px-8">
+        <Link
+          to="/"
+          className="font-bold text-md md:order-1 order-2 px-8 hover:opacity-80 transition-opacity"
+        >
           Cupom do <span className="text-orange-400">Burrinho</span>
-        </h3>
+        </Link>
         <div className="order-1 md:order-2">
           <Menu />
         </div>
