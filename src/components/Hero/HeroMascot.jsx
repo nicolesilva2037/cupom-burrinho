@@ -1,5 +1,5 @@
 import { useState } from "react";
-import burrinho from "../../assets/Images/burrinho-mascot.png";
+import burrinho from "../../assets/images/burrinho-mascot.png";
 
 export default function HeroMascot({ render }) {
   const [isHoveringMascot, setIsHoveringMascot] = useState(false);
